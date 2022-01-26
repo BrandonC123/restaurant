@@ -1,0 +1,21 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.header-left {
+    display: flex;
+    gap: 10px;
+}
+
+.background {
+    background-image: url("./bg-pic.jpg");
+    height: 75vh;
+    width: 100vw;
+}
