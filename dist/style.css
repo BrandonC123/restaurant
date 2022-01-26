@@ -3,19 +3,26 @@ body, html {
     padding: 0;
 }
 
-.header {
+#content {
     display: flex;
-    justify-content: space-between;
-    padding: 8px;
+    justify-content: center;
 }
 
-.header-left {
+.text-container {
     display: flex;
+    flex-direction: column;
     gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: lightgray;
+    border-radius: 20px;
+    padding: 20px 50px 20px 50px;
 }
 
-.background {
-    background-image: url("./bg-pic.jpg");
-    height: 75vh;
-    width: 100vw;
+#title{
+    font-size: 36px;
+    border: solid 4px white;
+    border-radius: 20px;
 }
+
