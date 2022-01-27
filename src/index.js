@@ -52,5 +52,22 @@ const frontPage = (() => {
     const location = document.createElement("div");
     location.setAttribute("id", "location");
     location.textContent = "123 Sesame Street";
-    
+
+    const hours = document.createElement("div");
+    hours.setAttribute("id", "hours");
+    hours.textContent = `Sunday: 10am - 10pm Saturday: 9am - 10pm
+    Monday-Friday: 9am - 10pm Hours subject to change on holidays`;
+
+    textCont.appendChild(title);
+    textCont.appendChild(summary);
+    textCont.appendChild(menu1);
+    textCont.appendChild(menu2);
+    textCont.appendChild(menu3);
+    textCont.appendChild(location);
+    textCont.appendChild(hours);
+
+    const content = document.getElementById("content");
+    content.appendChild(header);
+    content.appendChild(textCont);
+    console.log("T")
 })();
