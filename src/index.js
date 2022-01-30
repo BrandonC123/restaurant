@@ -21,6 +21,7 @@ const frontPage = (() => {
     header.appendChild(menu);
     header.appendChild(contact);
 
+    const homeContainer = document.createElement("div");
     function createHome() {
         const title = document.createElement("div");
         title.textContent = "Burger Shop";
@@ -59,7 +60,6 @@ const frontPage = (() => {
         hours.textContent = `Sunday: 10am - 10pm Saturday: 9am - 10pm
     Monday-Friday: 9am - 10pm Hours subject to change on holidays`;
 
-        const homeContainer = document.createElement("div");
         homeContainer.appendChild(title);
         homeContainer.appendChild(summary);
         homeContainer.appendChild(menu1);
@@ -72,15 +72,16 @@ const frontPage = (() => {
         createHome,
         header,
         homeContainer,
-    }
+    };
 })();
 
-const menu = () => {
+const menu = (() => {
+    const menuContainer = document.createElement("div");
     function createMenu() {
         const menuTitle = document.createElement("div");
         menuTitle.textContent = "Menu";
         menuTitle.classList.add("title");
-        setup.textCont.appendChild(menuTitle);
+        menuContainer.appendChild(menuTitle);
 
         const burgName1 = document.createElement("div");
         burgName1.textContent = "Burger 1";
@@ -92,7 +93,7 @@ const menu = () => {
         menuItem1.classList.add("menu-item");
         menuItem1.appendChild(burgName1);
         menuItem1.appendChild(burgImg1);
-        setup.textCont.appendChild(menuItem1);
+        menuContainer.appendChild(menuItem1);
 
         const burgName2 = document.createElement("div");
         burgName2.textContent = "Burger 2";
@@ -104,7 +105,7 @@ const menu = () => {
         menuItem2.classList.add("menu-item");
         menuItem2.appendChild(burgName2);
         menuItem2.appendChild(burgImg2);
-        setup.textCont.appendChild(menuItem2);
+        menuContainer.appendChild(menuItem2);
 
         const burgName3 = document.createElement("div");
         burgName3.textContent = "Burger 3";
@@ -116,19 +117,17 @@ const menu = () => {
         menuItem3.classList.add("menu-item");
         menuItem3.appendChild(burgName3);
         menuItem3.appendChild(burgImg3);
-        setup.textCont.appendChild(menuItem3);
-
-        const cont = document.getElementById("content");
-        cont.appendChild(setup.textCont);
+        menuContainer.appendChild(menuItem3);
     }
     return {
         createMenu,
+        menuContainer,
     };
-};
+})();
 
-const contact = () => {
+const contact = (() => {
+    const contactTitle = document.createElement("div");
     function createContact() {
-        const contactTitle = document.createElement("div");
         contactTitle.classList.add("title");
         contactTitle.textContent = "Contact";
 
@@ -145,11 +144,13 @@ const contact = () => {
         contactCont.appendChild(number);
         contactCont.appendChild(email);
         contactCont.appendChild(location);
+        contactTitle.appendChild(contactCont);
     }
     return {
         createContact,
+        contactTitle,
     };
-};
+})();
 
 const setup = (() => {
     let activePage;
@@ -159,16 +160,29 @@ const setup = (() => {
     content.appendChild(frontPage.header);
     frontPage.createHome();
     textCont.appendChild(frontPage.homeContainer);
+    content.appendChild(textCont);
+    activePage = frontPage.homeContainer;
     const homeBtn = document.getElementById("home");
     homeBtn.addEventListener("click", () => {
+        textCont.removeChild(activePage);
+        frontPage.createHome();
         textCont.appendChild(frontPage.homeContainer);
+        activePage = frontPage.homeContainer;
     });
     const menuBtn = document.getElementById("menu");
     menuBtn.addEventListener("click", () => {
+        content.removeChild(activePage);
         menu.createMenu();
+        textCont.appendChild(menu.menuContainer);
+        activePage = menu.menuContainer;
     });
     const contactBtn = document.getElementById("contact");
-    homeBtn.addEventListener("click", () => {});
+    contactBtn.addEventListener("click", () => {
+        textCont.removeChild(activePage);
+        contact.createContact();
+        textCont.appendChild(contact.contactTitle);
+        activePage = contact.contactTitle;
+    });
     return {
         activePage,
         content,
