@@ -31,7 +31,6 @@ body, html {
 .text-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     justify-content: center;
     align-items: center;
     width: 50%;
@@ -80,12 +79,24 @@ body, html {
     width: 150px;
 }
 
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .contact-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
+    width: 280px;
     aspect-ratio: 1 / 1;
     padding: 20px;
     border: solid 2px black;
     border-radius: 50%;
     text-align: center;
+    font-size: 14px;
 }
 
