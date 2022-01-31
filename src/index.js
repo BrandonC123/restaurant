@@ -69,10 +69,17 @@ const frontPage = (() => {
         return homeContainer;
     }
     const homeContainer = createHome();
+
+    const footer = document.createElement("div");
+    footer.classList.add("footer");
+    const footName = document.createElement("div");
+    footName.textContent = "Brandon Chu";
+    footer.appendChild(footName);
     return {
         createHome,
         header,
         homeContainer,
+        footer,
     };
 })();
 
@@ -131,6 +138,7 @@ const menu = (() => {
 const contact = (() => {
     function createContact() {
         const contactContainer = document.createElement("div");
+        contactContainer.classList.add("contact-container");
         const contactTitle = document.createElement("div");
         contactTitle.classList.add("title");
         contactTitle.textContent = "Contact";
@@ -163,11 +171,14 @@ const setup = (() => {
     let activePage;
     const content = document.getElementById("content");
     const textCont = document.createElement("div");
+    const test = document.createElement("div")
     textCont.classList.add("text-container");
-    content.appendChild(frontPage.header);
+    test.appendChild(frontPage.header);
     frontPage.createHome();
     textCont.appendChild(frontPage.homeContainer);
-    content.appendChild(textCont);
+    test.appendChild(textCont);
+    content.appendChild(test);
+    content.appendChild(frontPage.footer);
     activePage = frontPage.homeContainer;
     const homeBtn = document.getElementById("home");
     homeBtn.addEventListener("click", () => {
