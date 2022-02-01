@@ -74,7 +74,13 @@ const frontPage = (() => {
     footer.classList.add("footer");
     const footName = document.createElement("div");
     footName.textContent = "Brandon Chu";
+    const footYear = document.createElement("div")
+    footYear.textContent = "2022"
+    const credit = document.createElement("div")
+    credit.textContent = "The Odin Project"
+    footer.appendChild(footYear)
     footer.appendChild(footName);
+    footer.appendChild(credit);
     return {
         createHome,
         header,
@@ -171,13 +177,16 @@ const setup = (() => {
     let activePage;
     const content = document.getElementById("content");
     const textCont = document.createElement("div");
-    const test = document.createElement("div")
+    const topHalf = document.createElement("div");
+    topHalf.classList.add("top-half");
     textCont.classList.add("text-container");
-    test.appendChild(frontPage.header);
+
     frontPage.createHome();
+    topHalf.appendChild(frontPage.header);
     textCont.appendChild(frontPage.homeContainer);
-    test.appendChild(textCont);
-    content.appendChild(test);
+    topHalf.appendChild(textCont);
+
+    content.appendChild(topHalf);
     content.appendChild(frontPage.footer);
     activePage = frontPage.homeContainer;
     const homeBtn = document.getElementById("home");
