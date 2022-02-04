@@ -6,13 +6,19 @@ body, html {
 #content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     background-image: url("./bg-pic.jpg");
     height: 100vh;
-    /* width: 100%; */
-    padding: 30px;
     font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.top-half {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 .header {
@@ -33,7 +39,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 50vw;
     background-color: rgb(211, 211, 211, .8);
     border-radius: 20px;
     padding: 20px 50px 20px 50px;
@@ -43,10 +49,18 @@ body, html {
     margin-top: 10px;
 }
 
+.home-container, .menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 #title{
+    display: inline-block;
     font-size: 36px;
     border: solid 4px white;
     border-radius: 20px;
+    padding: 8px;
 }
 
 #sum {
@@ -56,8 +70,26 @@ body, html {
     border-top-right-radius: 25%;
 }
 
+#popItem1 {
+    border: 4px solid rgb(206, 66, 66);
+    padding: 5px;
+    border-radius: 25%;
+}
+
+#popItem2 {
+    border: 4px solid rgb(137, 216, 17);
+    padding: 5px;
+    border-radius: 25%;
+}
+
+#popItem3 {
+    border: 4px solid rgb(226, 226, 43);
+    padding: 5px;
+    border-radius: 25%;
+}
+
 #location {
-    border: solid 4px rgb(194, 28, 28);
+    border: solid 4px rgb(122, 39, 39);
     padding: 8px;
     border-radius: 35%;
 }
@@ -67,10 +99,15 @@ body, html {
     padding: 8px;
     border-bottom-left-radius: 25%;
     border-bottom-right-radius: 25%;
+    text-align: center;
+}
+
+.menu-container {
+    flex-wrap: wrap;
 }
 
 .menu-item {
-    border: solid 2px black;
+    border: 2px solid black;
     border-radius: 5px;
 }
 
@@ -84,6 +121,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    gap: 10px;
 }
 
 .contact-cont {
@@ -97,6 +135,20 @@ body, html {
     border: solid 2px black;
     border-radius: 50%;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(211, 211, 211, .8);
+    font-size: 12px;
+    padding: 5px 0 5px 0;
+}
+
+.pressed {
+    background-color: aqua;
 }
 
