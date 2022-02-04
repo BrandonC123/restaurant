@@ -25,8 +25,10 @@ const frontPage = (() => {
         const homeContainer = document.createElement("div");
         homeContainer.classList.add("home-container");
         const title = document.createElement("div");
-        title.textContent = "Burger Shop";
-        title.setAttribute("id", "title");
+        const homeTitle = document.createElement("div");
+        homeTitle.textContent = "Burger Shop";
+        homeTitle.setAttribute("id", "title");
+        title.appendChild(homeTitle);
         homeContainer.appendChild(title);
 
         const summary = document.createElement("div");
@@ -37,23 +39,23 @@ const frontPage = (() => {
         summary.setAttribute("id", "sum");
         homeContainer.appendChild(summary);
 
-        const menu1 = document.createElement("div");
-        menu1.classList.add("menu-item");
-        menu1.setAttribute("id", "menu1");
-        menu1.textContent = "fill";
-        homeContainer.appendChild(menu1);
+        const popItem1 = document.createElement("div");
+        popItem1.classList.add("popular-item");
+        popItem1.setAttribute("id", "popItem1");
+        popItem1.textContent = "fill";
+        homeContainer.appendChild(popItem1);
 
-        const menu2 = document.createElement("div");
-        menu2.classList.add("menu-item");
-        menu2.setAttribute("id", "menu2");
-        menu2.textContent = "fill";
-        homeContainer.appendChild(menu2);
+        const popItem2 = document.createElement("div");
+        popItem2.classList.add("popular-item");
+        popItem2.setAttribute("id", "popItem2");
+        popItem2.textContent = "fill";
+        homeContainer.appendChild(popItem2);
 
-        const menu3 = document.createElement("div");
-        menu3.classList.add("menu-item");
-        menu3.setAttribute("id", "menu3");
-        menu3.textContent = "fill";
-        homeContainer.appendChild(menu3);
+        const popItem3 = document.createElement("div");
+        popItem3.classList.add("popular-item");
+        popItem3.setAttribute("id", "popItem3");
+        popItem3.textContent = "fill";
+        homeContainer.appendChild(popItem3);
 
         const location = document.createElement("div");
         location.setAttribute("id", "location");
@@ -68,7 +70,7 @@ const frontPage = (() => {
         hours.textContent = "Hours:";
         hours1.textContent = "Sunday: 10am - 10pm";
         hours2.textContent = "Saturday: 9am - 10pm";
-        hours3.textContent = "Monday-Friday: 9am";
+        hours3.textContent = "Monday-Friday: 9am - 9pm";
         hours.appendChild(hours1);
         hours.appendChild(hours2);
         hours.appendChild(hours3);
