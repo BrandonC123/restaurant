@@ -111,7 +111,7 @@ const menu = (() => {
         burgName1.textContent = "Burger 1";
         burgName1.classList.add("food-name");
         const burgImg1 = document.createElement("img");
-        burgImg1.src = "../dist/1.jpg";
+        burgImg1.src = "./img/1.jpg";
         burgImg1.classList.add("food-img");
         const menuItem1 = document.createElement("div");
         menuItem1.classList.add("menu-item");
@@ -123,7 +123,7 @@ const menu = (() => {
         burgName2.textContent = "Burger 2";
         burgName2.classList.add("food-name");
         const burgImg2 = document.createElement("img");
-        burgImg2.src = "../dist/2.jpg";
+        burgImg2.setAttribute("id", "menu-item2")
         burgImg2.classList.add("food-img");
         const menuItem2 = document.createElement("div");
         menuItem2.classList.add("menu-item");
@@ -135,7 +135,7 @@ const menu = (() => {
         burgName3.textContent = "Burger 3";
         burgName3.classList.add("food-name");
         const burgImg3 = document.createElement("img");
-        burgImg3.src = "../dist/3.jpg";
+        burgImg3.src = "./img/3.jpg";
         burgImg3.classList.add("food-img");
         const menuItem3 = document.createElement("div");
         menuItem3.classList.add("menu-item");
