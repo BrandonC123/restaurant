@@ -110,9 +110,8 @@ const menu = (() => {
         const burgName1 = document.createElement("div");
         burgName1.textContent = "Burger 1";
         burgName1.classList.add("food-name");
-        const burgImg1 = document.createElement("img");
-        burgImg1.src = "./img/1.jpg";
-        burgImg1.classList.add("food-img");
+        const burgImg1 = document.createElement("div");
+        burgImg1.setAttribute("id", "menu-item1")
         const menuItem1 = document.createElement("div");
         menuItem1.classList.add("menu-item");
         menuItem1.appendChild(burgName1);
@@ -122,9 +121,8 @@ const menu = (() => {
         const burgName2 = document.createElement("div");
         burgName2.textContent = "Burger 2";
         burgName2.classList.add("food-name");
-        const burgImg2 = document.createElement("img");
+        const burgImg2 = document.createElement("div");
         burgImg2.setAttribute("id", "menu-item2")
-        burgImg2.classList.add("food-img");
         const menuItem2 = document.createElement("div");
         menuItem2.classList.add("menu-item");
         menuItem2.appendChild(burgName2);
@@ -134,9 +132,8 @@ const menu = (() => {
         const burgName3 = document.createElement("div");
         burgName3.textContent = "Burger 3";
         burgName3.classList.add("food-name");
-        const burgImg3 = document.createElement("img");
-        burgImg3.src = "./img/3.jpg";
-        burgImg3.classList.add("food-img");
+        const burgImg3 = document.createElement("div");
+        burgImg3.setAttribute("id", "menu-item3")
         const menuItem3 = document.createElement("div");
         menuItem3.classList.add("menu-item");
         menuItem3.appendChild(burgName3);

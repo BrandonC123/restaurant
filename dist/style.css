@@ -109,15 +109,27 @@ body, html {
 .menu-item {
     border: 2px solid black;
     border-radius: 5px;
+    padding: 5px;
 }
 
-.food-img {
+#menu-item1 {
     height: 150px;
     width: 150px;
+    background-image: url("../src/img/1.jpg");
+    background-size: 150px 150px;
 }
 
 #menu-item2 {
+    height: 150px;
+    width: 150px;
     background-image: url("../src/img/2.jpg");
+    background-size: 150px 150px;
+}
+
+#menu-item3 {
+    height: 150px;
+    width: 150px;
+    background-image: url("../src/img/3.jpg");
     background-size: 150px 150px;
 }
 
@@ -151,6 +163,7 @@ body, html {
     background-color: rgb(211, 211, 211, .8);
     font-size: 12px;
     padding: 5px 0 5px 0;
+    margin-top: 20px;
 }
 
 .pressed {
